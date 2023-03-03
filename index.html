@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- design made by initmd! https://initmd.xyz ! -->
+
+<head>
+  <link href="https://unpkg.com/nes.icons@latest/css/nes-icons.min.css" rel="stylesheet" />
+  <style lang="scss">
+    .move-in {
+      animation: move-in .6s cubic-bezier(.6, .6, .3, 1.3)both;
+      animation-delay: .1s
+    }
+
+    @media(prefers-reduced-motion) {
+      .move-in {
+        animation: none
+      }
+    }
+
+    @keyframes move-in {
+      from {
+        opacity: 0;
+        transform: translateY(50px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+  </style>
+  <style>
+    @font-face {
+      font-family: "Unifont";
+      src: local("Unifont"), url(font/unifont.ttf) format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    html,
+    body {
+      background-color: #2e2838 !important;
+      font-family: 'Unifont', sans-serif !important;
+      margin: 0 !;
+      color: whitesmoke !important;
+    }
+
+    .body {
+        position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+    }
+
+    h1 {
+      color: #e1e3c1 !important;
+      font-size: 35px !important;
+    }
+
+    .footer {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      padding: 0;
+      width: 15%;
+    }
+
+    .footer img {
+      width: 100%;
+    }
+
+    .socials {
+      display: inline-flex;
+    }
+
+    .socialLink {
+      flex: auto;
+      padding: 10px;
+      padding-top: 0px !important;
+      padding-bottom: 0 !important;
+    }
+
+    .socialLink a {
+      color: #c1cce3 !important;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .socialLink {
+        flex: auto;
+        padding: 0px !important;
+      }
+    }
+
+    a {
+        color: #e3c1dc !important;
+    }
+
+    h2 {
+        color: #c1d9e3 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="/oneko.js" is:inline></script>
+  <script>
+    let player = new Audio('kaitenzushi.mp3')
+    function start() {
+      // check if player is already playing
+      if (player.paused) {
+        player.play()
+      }
+    }
+    window.addEventListener('mousedown', start)
+    window.addEventListener('keydown', start)
+    window.addEventListener('touchstart', start)
+    window.addEventListener('touchmove', start)
+    window.addEventListener('mousemove', start)
+  </script>
+  <noscript>
+  <audio loop autoplay>
+    <source src="kaitenzushi.mp3">
+  </audio>
+</noscript>
+
+
+  <div class='body'>
+    <h1 class="move-in"><b>λ- lambdagg</b></h1>
+    <h2 class="move-in" style="animation-delay: 0.8s;"><b>i like writing computer code!</b></h2>
+    <div class="links move-in" style="animation-delay: 1.6s;">
+        <i class="nes-icon github"></i> <span><a href="https://github.com/lambdagg">github</a></span>
+      |
+      <i class="nes-icon twitter"></i> <span><a href="https://twitter.com/lambdagg">twitter</a></span>
+      |
+      <i class="nes-icon comment"></i> <span><a href="/blog">blog</a></span>
+      |
+      <i class="nes-icon discord"></i> <span><a href="https://discord.gg/eEP7tfSa">discord</a></span>
+    </div>
+
+
+</body>
+
+</html>
